@@ -1,0 +1,1192 @@
+[
+    {
+        "code_id": 1,
+        "code": "i",
+        "code_text": "Attitudes",
+        "t1": "i",
+        "t2": "",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 2,
+        "code": "ia",
+        "code_text": "Education",
+        "t1": "i",
+        "t2": "a",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 3,
+        "code": "ia1",
+        "code_text": "Secular",
+        "t1": "i",
+        "t2": "a",
+        "t3": "1",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 4,
+        "code": "ia1a",
+        "code_text": "Elementary, Higher (High School and College)",
+        "t1": "i",
+        "t2": "a",
+        "t3": "1",
+        "t4": "a",
+        "t5": ""
+    },
+    {
+        "code_id": 5,
+        "code": "ia1b",
+        "code_text": "Foreign Languages",
+        "t1": "i",
+        "t2": "a",
+        "t3": "1",
+        "t4": "b",
+        "t5": ""
+    },
+    {
+        "code_id": 6,
+        "code": "ia1c",
+        "code_text": "Taxation for Public Schools",
+        "t1": "i",
+        "t2": "a",
+        "t3": "1",
+        "t4": "c",
+        "t5": ""
+    },
+    {
+        "code_id": 7,
+        "code": "ia1d",
+        "code_text": "Special Endowments",
+        "t1": "i",
+        "t2": "a",
+        "t3": "1",
+        "t4": "d",
+        "t5": ""
+    },
+    {
+        "code_id": 8,
+        "code": "ia2",
+        "code_text": "Parochial",
+        "t1": "i",
+        "t2": "a",
+        "t3": "2",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 9,
+        "code": "ia2a",
+        "code_text": "Elementary, Higher (High School and College)",
+        "t1": "i",
+        "t2": "a",
+        "t3": "2",
+        "t4": "a",
+        "t5": ""
+    },
+    {
+        "code_id": 10,
+        "code": "ia2b",
+        "code_text": "Foreign Languages",
+        "t1": "i",
+        "t2": "a",
+        "t3": "2",
+        "t4": "b",
+        "t5": ""
+    },
+    {
+        "code_id": 11,
+        "code": "ia2c",
+        "code_text": "Contributions",
+        "t1": "i",
+        "t2": "a",
+        "t3": "2",
+        "t4": "c",
+        "t5": ""
+    },
+    {
+        "code_id": 12,
+        "code": "ia2d",
+        "code_text": "Special Endowments",
+        "t1": "i",
+        "t2": "a",
+        "t3": "2",
+        "t4": "d",
+        "t5": ""
+    },
+    {
+        "code_id": 13,
+        "code": "ia3",
+        "code_text": "Adult Education",
+        "t1": "i",
+        "t2": "a",
+        "t3": "3",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 14,
+        "code": "ib",
+        "code_text": "Mores",
+        "t1": "i",
+        "t2": "b",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 15,
+        "code": "ib1",
+        "code_text": "Temperance",
+        "t1": "i",
+        "t2": "b",
+        "t3": "1",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 16,
+        "code": "ib2",
+        "code_text": "Blue Laws",
+        "t1": "i",
+        "t2": "b",
+        "t3": "2",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 17,
+        "code": "ib3",
+        "code_text": "Family Organization",
+        "t1": "i",
+        "t2": "b",
+        "t3": "3",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 18,
+        "code": "ib3a",
+        "code_text": "Marriage",
+        "t1": "i",
+        "t2": "b",
+        "t3": "3",
+        "t4": "a",
+        "t5": ""
+    },
+    {
+        "code_id": 19,
+        "code": "ib3b",
+        "code_text": "Parent-Child Relationship",
+        "t1": "i",
+        "t2": "b",
+        "t3": "3",
+        "t4": "b",
+        "t5": ""
+    },
+    {
+        "code_id": 20,
+        "code": "ib3c",
+        "code_text": "Family Economic Organization",
+        "t1": "i",
+        "t2": "b",
+        "t3": "3",
+        "t4": "c",
+        "t5": ""
+    },
+    {
+        "code_id": 21,
+        "code": "ib4",
+        "code_text": "Religious Customs and Practices",
+        "t1": "i",
+        "t2": "b",
+        "t3": "4",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 22,
+        "code": "ic",
+        "code_text": "Own and Other National or Language Groups",
+        "t1": "i",
+        "t2": "c",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 23,
+        "code": "id",
+        "code_text": "Economic Organization",
+        "t1": "i",
+        "t2": "d",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 24,
+        "code": "id1",
+        "code_text": "Capitalistic Enterprise",
+        "t1": "i",
+        "t2": "d",
+        "t3": "1",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 25,
+        "code": "id1a",
+        "code_text": "Big Business",
+        "t1": "i",
+        "t2": "d",
+        "t3": "1",
+        "t4": "a",
+        "t5": ""
+    },
+    {
+        "code_id": 26,
+        "code": "id1b",
+        "code_text": "Small Business",
+        "t1": "i",
+        "t2": "d",
+        "t3": "1",
+        "t4": "b",
+        "t5": ""
+    },
+    {
+        "code_id": 27,
+        "code": "id2",
+        "code_text": "Labor Organization and Activities",
+        "t1": "i",
+        "t2": "d",
+        "t3": "2",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 28,
+        "code": "id2a",
+        "code_text": "Unions",
+        "t1": "i",
+        "t2": "d",
+        "t3": "2",
+        "t4": "a",
+        "t5": ""
+    },
+    {
+        "code_id": 29,
+        "code": "id2a1",
+        "code_text": "Company",
+        "t1": "i",
+        "t2": "d",
+        "t3": "2",
+        "t4": "a",
+        "t5": "1"
+    },
+    {
+        "code_id": 30,
+        "code": "id2a2",
+        "code_text": "Craft",
+        "t1": "i",
+        "t2": "d",
+        "t3": "2",
+        "t4": "a",
+        "t5": "2"
+    },
+    {
+        "code_id": 31,
+        "code": "id2a3",
+        "code_text": "Industrial",
+        "t1": "i",
+        "t2": "d",
+        "t3": "2",
+        "t4": "a",
+        "t5": "3"
+    },
+    {
+        "code_id": 32,
+        "code": "id2a4",
+        "code_text": "Strikes",
+        "t1": "i",
+        "t2": "d",
+        "t3": "2",
+        "t4": "a",
+        "t5": "4"
+    },
+    {
+        "code_id": 33,
+        "code": "id2b",
+        "code_text": "Cooperative",
+        "t1": "i",
+        "t2": "d",
+        "t3": "2",
+        "t4": "b",
+        "t5": ""
+    },
+    {
+        "code_id": 34,
+        "code": "id2c",
+        "code_text": "Unemployment",
+        "t1": "i",
+        "t2": "d",
+        "t3": "2",
+        "t4": "c",
+        "t5": ""
+    },
+    {
+        "code_id": 35,
+        "code": "ie",
+        "code_text": "Social Organization",
+        "t1": "i",
+        "t2": "e",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 36,
+        "code": "if",
+        "code_text": "Politics",
+        "t1": "i",
+        "t2": "f",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 37,
+        "code": "if1",
+        "code_text": "Voting as Blocs",
+        "t1": "i",
+        "t2": "f",
+        "t3": "1",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 38,
+        "code": "if2",
+        "code_text": "Part Played by Social and Political Societies",
+        "t1": "i",
+        "t2": "f",
+        "t3": "2",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 39,
+        "code": "if3",
+        "code_text": "Programs and Purposes",
+        "t1": "i",
+        "t2": "f",
+        "t3": "3",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 40,
+        "code": "if4",
+        "code_text": "Extent of Influence",
+        "t1": "i",
+        "t2": "f",
+        "t3": "4",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 41,
+        "code": "if5",
+        "code_text": "Political Leadership",
+        "t1": "i",
+        "t2": "f",
+        "t3": "5",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 42,
+        "code": "if6",
+        "code_text": "Graft and Corruption",
+        "t1": "i",
+        "t2": "f",
+        "t3": "6",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 43,
+        "code": "ig",
+        "code_text": "War",
+        "t1": "i",
+        "t2": "g",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 44,
+        "code": "ih",
+        "code_text": "Social Problems and Social Legislation",
+        "t1": "i",
+        "t2": "h",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 110,
+        "code": "ij",
+        "code_text": "Interpretation of American History",
+        "t1": "i",
+        "t2": "j",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 111,
+        "code": "ik",
+        "code_text": "Position of Women and Feminism",
+        "t1": "i",
+        "t2": "k",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 112,
+        "code": "il",
+        "code_text": "Agriculture in the United States",
+        "t1": "i",
+        "t2": "l",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 113,
+        "code": "im",
+        "code_text": "Health and Sanitation",
+        "t1": "i",
+        "t2": "m",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 45,
+        "code": "ii",
+        "code_text": "Contributions and Activities",
+        "t1": "ii",
+        "t2": "",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 46,
+        "code": "iia",
+        "code_text": "Vocational",
+        "t1": "ii",
+        "t2": "a",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 47,
+        "code": "iia1",
+        "code_text": "Professional",
+        "t1": "ii",
+        "t2": "a",
+        "t3": "1",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 48,
+        "code": "iia2",
+        "code_text": "Industrial and Commercial",
+        "t1": "ii",
+        "t2": "a",
+        "t3": "2",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 49,
+        "code": "iia3",
+        "code_text": "Aesthetic",
+        "t1": "ii",
+        "t2": "a",
+        "t3": "3",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 50,
+        "code": "iia3a",
+        "code_text": "Arts and Handicrafts",
+        "t1": "ii",
+        "t2": "a",
+        "t3": "3",
+        "t4": "a",
+        "t5": ""
+    },
+    {
+        "code_id": 51,
+        "code": "iia3b",
+        "code_text": "Music",
+        "t1": "ii",
+        "t2": "a",
+        "t3": "3",
+        "t4": "b",
+        "t5": ""
+    },
+    {
+        "code_id": 52,
+        "code": "iia3c",
+        "code_text": "Painting and Sculpture",
+        "t1": "ii",
+        "t2": "a",
+        "t3": "3",
+        "t4": "c",
+        "t5": ""
+    },
+    {
+        "code_id": 53,
+        "code": "iia3d",
+        "code_text": "Theatrical",
+        "t1": "ii",
+        "t2": "a",
+        "t3": "3",
+        "t4": "d",
+        "t5": ""
+    },
+    {
+        "code_id": 54,
+        "code": "iia3d1",
+        "code_text": "Drama",
+        "t1": "ii",
+        "t2": "a",
+        "t3": "3",
+        "t4": "d",
+        "t5": "1"
+    },
+    {
+        "code_id": 55,
+        "code": "iia3d2",
+        "code_text": "Dancing",
+        "t1": "ii",
+        "t2": "a",
+        "t3": "3",
+        "t4": "d",
+        "t5": "2"
+    },
+    {
+        "code_id": 56,
+        "code": "iib",
+        "code_text": "Avocational and Intellectual",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 57,
+        "code": "iib1",
+        "code_text": "Aesthetic",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "1",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 58,
+        "code": "iib1a",
+        "code_text": "Music",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "1",
+        "t4": "a",
+        "t5": ""
+    },
+    {
+        "code_id": 59,
+        "code": "iib1b",
+        "code_text": "Painting and Sculpture",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "1",
+        "t4": "b",
+        "t5": ""
+    },
+    {
+        "code_id": 60,
+        "code": "iib1c",
+        "code_text": "Theatrical",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "1",
+        "t4": "c",
+        "t5": ""
+    },
+    {
+        "code_id": 61,
+        "code": "iib1c1",
+        "code_text": "Drama",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "1",
+        "t4": "c",
+        "t5": "1"
+    },
+    {
+        "code_id": 62,
+        "code": "iib1c2",
+        "code_text": "Dancing",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "1",
+        "t4": "c",
+        "t5": "2"
+    },
+    {
+        "code_id": 63,
+        "code": "iib1c3",
+        "code_text": "Festivals, Pageants, Fairs and Expositions",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "1",
+        "t4": "c",
+        "t5": "3"
+    },
+    {
+        "code_id": 64,
+        "code": "iib1d",
+        "code_text": "Literary Societies",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "1",
+        "t4": "d",
+        "t5": ""
+    },
+    {
+        "code_id": 65,
+        "code": "iib1e",
+        "code_text": "Literature",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "1",
+        "t4": "e",
+        "t5": ""
+    },
+    {
+        "code_id": 66,
+        "code": "iib2",
+        "code_text": "Intellectual",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "2",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 67,
+        "code": "iib2a",
+        "code_text": "Libraries",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "2",
+        "t4": "a",
+        "t5": ""
+    },
+    {
+        "code_id": 68,
+        "code": "iib2b",
+        "code_text": "Museums",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "2",
+        "t4": "b",
+        "t5": ""
+    },
+    {
+        "code_id": 69,
+        "code": "iib2c",
+        "code_text": "Scientific and Historical Societies",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "2",
+        "t4": "c",
+        "t5": ""
+    },
+    {
+        "code_id": 70,
+        "code": "iib2d",
+        "code_text": "Publications",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "2",
+        "t4": "d",
+        "t5": ""
+    },
+    {
+        "code_id": 71,
+        "code": "iib2d1",
+        "code_text": "Newspapers",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "2",
+        "t4": "d",
+        "t5": "1"
+    },
+    {
+        "code_id": 72,
+        "code": "iib2d2",
+        "code_text": "Periodicals",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "2",
+        "t4": "d",
+        "t5": "2"
+    },
+    {
+        "code_id": 73,
+        "code": "iib2d3",
+        "code_text": "Books",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "2",
+        "t4": "d",
+        "t5": "3"
+    },
+    {
+        "code_id": 74,
+        "code": "iib2e",
+        "code_text": "Radio Programs and Cinema",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "2",
+        "t4": "e",
+        "t5": ""
+    },
+    {
+        "code_id": 75,
+        "code": "iib2f",
+        "code_text": "Special Schools and Classes",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "2",
+        "t4": "f",
+        "t5": ""
+    },
+    {
+        "code_id": 76,
+        "code": "iib2g",
+        "code_text": "Forums, Discussion Groups and Lectures",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "2",
+        "t4": "g",
+        "t5": ""
+    },
+    {
+        "code_id": 77,
+        "code": "iib3",
+        "code_text": "Athletics and Sports",
+        "t1": "ii",
+        "t2": "b",
+        "t3": "3",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 78,
+        "code": "iic",
+        "code_text": "Permanent Memorials",
+        "t1": "ii",
+        "t2": "c",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 79,
+        "code": "iid",
+        "code_text": "Benevolent and Protective Institutions",
+        "t1": "ii",
+        "t2": "d",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 80,
+        "code": "iid1",
+        "code_text": "Benevolent Societies",
+        "t1": "ii",
+        "t2": "d",
+        "t3": "1",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 81,
+        "code": "iid10",
+        "code_text": "Foreign and Domestic Relief",
+        "t1": "ii",
+        "t2": "d",
+        "t3": "10",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 82,
+        "code": "iid2",
+        "code_text": "Insurance Companies",
+        "t1": "ii",
+        "t2": "d",
+        "t3": "2",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 83,
+        "code": "iid3",
+        "code_text": "Hospitals, Clinics and Medical Aid",
+        "t1": "ii",
+        "t2": "d",
+        "t3": "3",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 84,
+        "code": "iid4",
+        "code_text": "Orphanages and Creches",
+        "t1": "ii",
+        "t2": "d",
+        "t3": "4",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 85,
+        "code": "iid5",
+        "code_text": "Homes for the Aged",
+        "t1": "ii",
+        "t2": "d",
+        "t3": "5",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 86,
+        "code": "iid6",
+        "code_text": "Settlement Houses and Community Centers",
+        "t1": "ii",
+        "t2": "d",
+        "t3": "6",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 87,
+        "code": "iid7",
+        "code_text": "Organizations for Legal Assistance",
+        "t1": "ii",
+        "t2": "d",
+        "t3": "7",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 88,
+        "code": "iid8",
+        "code_text": "Employment Agencies",
+        "t1": "ii",
+        "t2": "d",
+        "t3": "8",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 89,
+        "code": "iid9",
+        "code_text": "Extra-Legal Organizations",
+        "t1": "ii",
+        "t2": "d",
+        "t3": "9",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 90,
+        "code": "iie",
+        "code_text": "Crime and Delinquency",
+        "t1": "ii",
+        "t2": "e",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 91,
+        "code": "iie1",
+        "code_text": "Organized Crime",
+        "t1": "ii",
+        "t2": "e",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 92,
+        "code": "iie2",
+        "code_text": "Individual Crime",
+        "t1": "ii",
+        "t2": "e",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 93,
+        "code": "iie3",
+        "code_text": "Crime Prevention",
+        "t1": "ii",
+        "t2": "e",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 94,
+        "code": "iif",
+        "code_text": "Real Estate Transfers and Building Activities",
+        "t1": "ii",
+        "t2": "f",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 95,
+        "code": "iii",
+        "code_text": "Assimilation",
+        "t1": "iii",
+        "t2": "",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 96,
+        "code": "iiia",
+        "code_text": "Segregation",
+        "t1": "iii",
+        "t2": "a",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 97,
+        "code": "iiib",
+        "code_text": "Nationalistic Societies and Influences",
+        "t1": "iii",
+        "t2": "b",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 98,
+        "code": "iiib1",
+        "code_text": "Effect upon United States Government and State Policies",
+        "t1": "iii",
+        "t2": "b",
+        "t3": "1",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 99,
+        "code": "iiib2",
+        "code_text": "Activities of Nationalistic Societies",
+        "t1": "iii",
+        "t2": "b",
+        "t3": "2",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 100,
+        "code": "iiib3",
+        "code_text": "Commemoration of Holidays",
+        "t1": "iii",
+        "t2": "b",
+        "t3": "3",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 101,
+        "code": "iiib3a",
+        "code_text": "National",
+        "t1": "iii",
+        "t2": "b",
+        "t3": "3",
+        "t4": "a",
+        "t5": ""
+    },
+    {
+        "code_id": 102,
+        "code": "iiib3b",
+        "code_text": "Religious",
+        "t1": "iii",
+        "t2": "b",
+        "t3": "3",
+        "t4": "b",
+        "t5": ""
+    },
+    {
+        "code_id": 103,
+        "code": "iiib4",
+        "code_text": "Conventions and Conferences",
+        "t1": "iii",
+        "t2": "b",
+        "t3": "4",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 104,
+        "code": "iiic",
+        "code_text": "National Churches and Sects",
+        "t1": "iii",
+        "t2": "c",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 105,
+        "code": "iiid",
+        "code_text": "Participation in United States Service",
+        "t1": "iii",
+        "t2": "d",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 106,
+        "code": "iiie",
+        "code_text": "Youth Organizations",
+        "t1": "iii",
+        "t2": "e",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 107,
+        "code": "iiif",
+        "code_text": "Special Contributions to Early American Development",
+        "t1": "iii",
+        "t2": "f",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 108,
+        "code": "iiig",
+        "code_text": "Immigration and Emigration",
+        "t1": "iii",
+        "t2": "g",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 109,
+        "code": "iiih",
+        "code_text": "Relations with Homeland",
+        "t1": "iii",
+        "t2": "h",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 114,
+        "code": "iv",
+        "code_text": "Representative Individuals",
+        "t1": "iv",
+        "t2": "",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 115,
+        "code": "v",
+        "code_text": "Miscellaneous Characteristics",
+        "t1": "v",
+        "t2": "",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 116,
+        "code": "va",
+        "code_text": "Foreign Origins",
+        "t1": "v",
+        "t2": "a",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 117,
+        "code": "va1",
+        "code_text": "Geographical",
+        "t1": "v",
+        "t2": "a",
+        "t3": "1",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 118,
+        "code": "va2",
+        "code_text": "Social and Occupational",
+        "t1": "v",
+        "t2": "a",
+        "t3": "2",
+        "t4": "",
+        "t5": ""
+    },
+    {
+        "code_id": 119,
+        "code": "vb",
+        "code_text": "Picturesque Miscellanies",
+        "t1": "v",
+        "t2": "b",
+        "t3": "",
+        "t4": "",
+        "t5": ""
+    }
+]
