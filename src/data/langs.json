@@ -1,37 +1,150 @@
-["All Groups and Languages",
-    "Albanian",
-"Bohemian",
-"Brazilian",
-"Chinese",
-"Colombian",
-"Costa Rican",
-"Croatian",
-"Cuban",
-"Czech",
-"Danish",
-"Dutch",
-"Filipino",
-"German Jewish",
-"German",
-"Greek",
-"Hungarian",
-"Italian",
-"Jewish",
-"Lithuanian",
-"Mexican",
-"Montenegrin",
-"Norwegian",
-"Peruvian",
-"Polish",
-"Puerto Rican",
-"Russian",
-"Scandinavian",
-"Serbian",
-"Slovak",
-"Slovene",
-"Spanish",
-"Swedish",
-"Ukrainian",
-"Welsh",
-"White Russian",
-"Yiddish"]
+[
+    {
+        "lang_id": 1,
+        "lang": "Albanian"
+    },
+    {
+        "lang_id": 2,
+        "lang": "Bohemian"
+    },
+    {
+        "lang_id": 3,
+        "lang": "Brazilian"
+    },
+    {
+        "lang_id": 4,
+        "lang": "Chinese"
+    },
+    {
+        "lang_id": 5,
+        "lang": "Colombian"
+    },
+    {
+        "lang_id": 6,
+        "lang": "Costa Rican"
+    },
+    {
+        "lang_id": 7,
+        "lang": "Croatian"
+    },
+    {
+        "lang_id": 8,
+        "lang": "Cuban"
+    },
+    {
+        "lang_id": 9,
+        "lang": "Czech"
+    },
+    {
+        "lang_id": 10,
+        "lang": "Danish"
+    },
+    {
+        "lang_id": 11,
+        "lang": "Dutch"
+    },
+    {
+        "lang_id": 12,
+        "lang": "Filipino"
+    },
+    {
+        "lang_id": 13,
+        "lang": "German Jewish"
+    },
+    {
+        "lang_id": 14,
+        "lang": "German"
+    },
+    {
+        "lang_id": 15,
+        "lang": "Greek"
+    },
+    {
+        "lang_id": 16,
+        "lang": "Guatamalian"
+    },
+    {
+        "lang_id": 17,
+        "lang": "Hungarian"
+    },
+    {
+        "lang_id": 18,
+        "lang": "Italian"
+    },
+    {
+        "lang_id": 19,
+        "lang": "Jewish"
+    },
+    {
+        "lang_id": 20,
+        "lang": "Lithuanian"
+    },
+    {
+        "lang_id": 21,
+        "lang": "Mexican"
+    },
+    {
+        "lang_id": 22,
+        "lang": "Montenegrin"
+    },
+    {
+        "lang_id": 23,
+        "lang": "Norwegian"
+    },
+    {
+        "lang_id": 24,
+        "lang": "Peruvian"
+    },
+    {
+        "lang_id": 25,
+        "lang": "Polish"
+    },
+    {
+        "lang_id": 26,
+        "lang": "Puerto Rican"
+    },
+    {
+        "lang_id": 27,
+        "lang": "Russian"
+    },
+    {
+        "lang_id": 28,
+        "lang": "Scandinavian"
+    },
+    {
+        "lang_id": 29,
+        "lang": "Serbian"
+    },
+    {
+        "lang_id": 30,
+        "lang": "Slovak"
+    },
+    {
+        "lang_id": 31,
+        "lang": "Slovene"
+    },
+    {
+        "lang_id": 32,
+        "lang": "Spanish"
+    },
+    {
+        "lang_id": 33,
+        "lang": "Swedish"
+    },
+    {
+        "lang_id": 34,
+        "lang": "Ukrainian"
+    },
+    {
+        "lang_id": 35,
+        "lang": "Welsh"
+    },
+    {
+        "lang_id": 36,
+        "lang": "White Russian"
+    },
+    {
+        "lang_id": 37,
+        "lang": "Yiddish"
+    }
+]

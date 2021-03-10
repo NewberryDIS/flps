@@ -1,4 +1,4 @@
-import {useState}  from 'react'
+import { useState, useEffect }  from 'react'
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -13,8 +13,13 @@ import Sidebar from './components/sidebar'
 import Main from './components/main'
 import nlogo from './images/Nblack.png'
 import { Link } from '@material-ui/core';
-// import './App.css';
 
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Loading from './components/loading';
+
+// dark: rgb(30, 136, 229)
+// med: rgb(89, 167, 235)
+// light: rgb(157, 203, 243)
 
 const drawerWidth = 300;
 const useStyles = makeStyles((theme) => ({
@@ -47,12 +52,17 @@ const useStyles = makeStyles((theme) => ({
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
+  spacer: { 
+    paddingTop: '7vh', 
+    background: 'transparent',
+    border: 'none'
+  },
   drawerPaper: {
     boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px',
     width: drawerWidth,
   },
   content: {
-    width: '80%',
+    // width: '80%',
     margin: 'auto',
     flexGrow: 1,
     padding: theme.spacing(3),
@@ -64,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
   },
   langheader: {
     padding: '15px',
-    width: '80%',
+    // width: '80%',
     margin: '15px auto',
   },
   noresults: {
@@ -86,38 +96,131 @@ const useStyles = makeStyles((theme) => ({
     fontColor: 'white',
   },
   headercard: {
-
-'& div': {
-
-  fontFamily: "'Bembo W01', Cardo, serif",
-},
-
+    '& div': {
+      fontFamily: "'Bembo W01', Cardo, serif",
+    },
     maxWidth: '80%',
     margin: '15px auto',
     boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px',
 
-  }
+  },
+  checkboxes: {
+    margin: '0 auto',
+    width: '100%',
+  },
+  filterlists: {
+    fontSize: '0.75rem',
+    textTransform: 'uppercase',
+    overflow: 'auto',
+    maxHeight: '300px',    
+    boxShadow: 'inset 0px 3px 1px -2px rgb(0 0 0 / 20%), inset 0px 2px 2px 0px rgb(0 0 0 / 14%), inset 0px 1px 5px 0px rgb(0 0 0 / 12%)',
+  },
+  buttongroup:{
+    align: 'center',
+    // display: 'block',
+    // width: '100%',
+    margin: '10px auto',
+  },
+  seclabel: {
+    fontSize: '0.90rem',
+    textTransform: 'uppercase',
+    fontWeight: '700',
+    width: '90%',
+    margin: '10px auto',
+  },
+  code: {
+    fontSize: '0.90rem',
+    textTransform: 'uppercase',
+    fontWeight: '700',
+    width: '90%',
+    margin: '20px auto 0 auto',
+  },
+  button: {
+    margin: '10px auto',
+    backgroundColor: 'rgb(157, 203, 243)',
+    '&:hover': {
+      backgroundColor: 'rgb(89, 167, 235)',
+    }
+  },
+  counts: {
+    fontFamily: "'Bembo W01', Cardo, serif",
+    fontSize: '1.6rem',
+    color: 'black',
+    flex: '1',
+    textAlign: 'right',
+  },
+  codelistitem: {
+    textTransform: 'uppercase',
+    '& .MuiTypography-body1': {
+      fontSize: '0.75rem',
+
+    },
+
+    '& label': {
+      position: 'relative',
+      left: '-22px',
+    },
+  },
+
+  treeroot: {
+    fontSize: '0.75rem',
+    textTransform: 'uppercase',
+    overflow: 'auto',
+    maxHeight: '300px',    
+    padding: '5px',
+      boxShadow: 'inset 0px 3px 1px -2px rgb(0 0 0 / 20%), inset 0px 2px 2px 0px rgb(0 0 0 / 14%), inset 0px 1px 5px 0px rgb(0 0 0 / 12%)',
+  },
 }));
 
-function App(props) {
-
+function App(props) { 
+// css
   const classes = useStyles();
-  const [ lang, setLang ] = useState('All Groups and Languages')
+// filters
+  const [ lang, setLang ] = useState('All')
   const [ code, setCode ] = useState('')
-  const [ codeText, setCodeText ] = useState('')
-  const [ codeCount, setCodeCount ] = useState()
   const [ dates, setDates ] = useState([1850, 1950])
   const [ search, setSearch ] = useState('')
+  const [ count, setCount ] = useState(0)
+  const [ codeCount, setCodeCount ] = useState(0)
+// mobile utility
   const [ mobileOpen, setMobileOpen ] = useState(false)
-
-  const [ page, setPage ] = useState(0)
-
   const { window } = props;
+// data GET
+  const [ results, setResults ] = useState([])
+  const [ page, setPage ] = useState(0)
+  const [ loading, setLoading ] = useState(true)
+
+  
+  useEffect(() => {
+    // production: 
+    const url = 'https://flps.newberry.org/db/?code=' + code + '&lang=' + lang + '&dates=' + dates[0] + ',' + dates[1] + '&s='  + search + '&p=' + page
+    // testing & dev: 
+    // const url = 'http://localhost:3002/?code=' + code + '&lang=' + lang + '&dates=' + dates[0] + ',' + dates[1] + '&s='  + search + '&p=' + page
+    fetch(url)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setLoading(false)
+          setResults(result[0])
+          setCodeCount(result[2])
+          setCount(result[1][0]['COUNT(*)'])
+        },
+        (error) => {
+          setLoading(false)
+          console.log(error)
+        }
+      )
+    
+  }, [lang, code, dates, search, page])
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
   }
 
   const theme = useTheme();
+
+  const mqwidth = useMediaQuery('(min-width:1000px)');
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -133,9 +236,10 @@ function App(props) {
             <MenuIcon />
           </IconButton>
           <Avatar alt="Newberry" src={nlogo} variant="square" className={classes.large} />
-          <Typography variant="h4" noWrap>
-            <Link href="/" className={classes.homelink}>Foreign Language Press Survey</Link>
+          <Typography variant="h4" element="h1" noWrap>
+            <Link href="/" className={classes.homelink}>{mqwidth ? 'Foreign Language Press Survey' : 'FLPS' } </Link>
           </Typography>
+            <Typography className={classes.counts}>{loading ? 'Loading..' : count  + ' result' + (count > 1 || count === 0 ? 's' : '')}.</Typography>
         </Toolbar>
       </AppBar>
       <Sidebar 
@@ -145,11 +249,9 @@ function App(props) {
         setDates={setDates}
         code={code} 
         setCode={setCode}
-        codeText={codeText} 
-        setCodeText={setCodeText} 
+        codeCount={codeCount}
         search={search}
         setSearch={setSearch}
-        codeCount={codeCount} 
         page={page}
         setPage={setPage}
         classes={classes} 
@@ -157,8 +259,9 @@ function App(props) {
         mobileOpen={mobileOpen} 
         theme={theme}
         window={window}
+        results={results}
         />
-      <Main code={code} lang={lang} dates={dates} search={search} classes={classes} page={page} setPage={setPage} setCodeCount={setCodeCount} codeText={codeText} />
+        {loading ? <Loading /> : <Main results={results} search={search} classes={classes} />}
       <Footer />
     </div>
   );
