@@ -12,7 +12,7 @@ import Codeboxes from './codeboxes'
 // import Codes from './codes'
 import Dates from './dates'
 import Search from './search'
-import Checkboxes from './checkboxes'
+import Langboxes from './langboxes'
 
 import MoreInfo from './moreinfo';
 import { Link } from '@material-ui/core';
@@ -124,7 +124,7 @@ const Sidebar = ({
           <Typography className={accordionClasses.heading}>Select Groups</Typography>
         </AccordionSummary>
         <AccordionDetails className={accordionClasses.accdet}>
-          <Checkboxes classes={classes} setLang={setLang} />
+          <Langboxes classes={classes} setLang={setLang} />
         </AccordionDetails>
         </Accordion>
         <Accordion>
