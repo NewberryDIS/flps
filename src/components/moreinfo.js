@@ -65,9 +65,9 @@ export default function MoreInfo(props) {
 
   return (
     <div>
-    <Typography className={props.code ? classes.code : classes.button} variant="overline" size="small" onClick={handleOpen} >
-        {props.text}
-    </Typography>
+      <Typography className={props.code ? classes.code : classes.button} variant="overline" size="small" onClick={handleOpen} >
+          {props.text}
+      </Typography>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"

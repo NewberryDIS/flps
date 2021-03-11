@@ -6,7 +6,7 @@ const Main = ({results, search, classes, handleOpen}) => {
   // console.log(results)
   return (
     <main className={classes.content}>
-      <div className={classes.spacer} />
+      {/* <div className={classes.spacer} /> */}
       <CardSection data={results} classes={classes} searchTerm={search} handleOpen={handleOpen} />
     </main>
   )

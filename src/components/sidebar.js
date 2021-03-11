@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
       
       margin: '0 auto',
     },
-  }
+  },
 }));
 
 const Sidebar = ({
@@ -103,6 +103,7 @@ const Sidebar = ({
           <Typography variant="body2" display="inline">The </Typography> <Typography display="inline" variant="body2"className={accordionClasses.cflps} >Chicago Foreign Language Press Survey</Typography><Typography variant="body2" display="inline"> was published in 1942 by the Chicago Public Library Omnibus Project of the Works Progress Administration of Illinois. The purpose of the project was to translate and classify selected news articles that appeared in the foreign language press from 1855 to 1938. The project consists of 120,000 typewritten pages translated from newspapers of 22 different foreign language communities of Chicago.</Typography>
         </div>
         <MoreInfo activalue={0} text="Read more about this historic project."/>
+
         <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -158,7 +159,7 @@ const Sidebar = ({
         </Accordion>
         <div className={accordionClasses.buttonwrapper}>
 
-<Link href="/newversion" className={accordionClasses.resetbutton}><Button variant="contained" className={classes.button}>Reset Search</Button></Link>
+<Link href="/" className={accordionClasses.resetbutton}><Button variant="contained" className={classes.button}>Reset Search</Button></Link>
         </div>
         </div>
         </div>

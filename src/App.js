@@ -86,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
   },
   homelink: {
     color: 'black',
+    flex: 1,
     textDecoration: 'none',
     fontFamily: "'Bembo W01', Cardo, serif",
     '&:hover ': {
@@ -170,6 +171,25 @@ const useStyles = makeStyles((theme) => ({
     padding: '5px',
       boxShadow: 'inset 0px 3px 1px -2px rgb(0 0 0 / 20%), inset 0px 2px 2px 0px rgb(0 0 0 / 14%), inset 0px 1px 5px 0px rgb(0 0 0 / 12%)',
   },
+  mainwrapper: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  questions: {
+    textAlign: 'center',
+    display: 'block',
+    width: '65%',
+    margin: '80px auto 0 auto',
+    padding: '25px',
+    lineHeight: '1.5rem',
+    position: 'relative',
+    right: '0',
+    border: '1px solid rgb(89, 167, 235)',
+    '& a': {
+      color: 'black',
+      textDecoration: 'underline',
+    }
+  },
 }));
 
 function App(props) { 
@@ -239,6 +259,7 @@ function App(props) {
           <Typography variant="h4" element="h1" noWrap>
             <Link href="/" className={classes.homelink}>{mqwidth ? 'Foreign Language Press Survey' : 'FLPS' } </Link>
           </Typography>
+
             <Typography className={classes.counts}>{loading ? 'Loading..' : count  + ' result' + (count > 1 || count === 0 ? 's' : '')}.</Typography>
         </Toolbar>
       </AppBar>
@@ -260,8 +281,12 @@ function App(props) {
         theme={theme}
         window={window}
         results={results}
-        />
+        /><div className={classes.mainwrapper}>
+          <Typography className={classes.questions} variant="overline" size="small"  >
+          This site is undergoing revision; please check back as we continue to add functionality. <br />Questions or comments? Contact <a target="_blank" href="mailto:dis@newberry.org" target="_blank" rel="noopener noreferrer">dis@newberry.org<span aria-label="(opens in new tab)"></span></a>
+          </Typography>
         {loading ? <Loading /> : <Main results={results} search={search} classes={classes} />}
+        </div>
       <Footer />
     </div>
   );
