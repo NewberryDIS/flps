@@ -14,12 +14,12 @@ const Main = ({results, search, classes, handleOpen}) => {
 
 export default Main
 
-const colors = [
+export const colors = [
     '#59a7eb', '#9dcbf3', '#9dcbf3'
   ]
 
 const CardSection = ({data, classes, searchTerm, handleOpen}) => {
-    const noResults = <Paper className={classes.noresults}><Typography>No Results.</Typography></Paper>
+    const noResults = <Paper className={classes.noresults}><Typography>No results.</Typography></Paper>
     const cards = data.map((i, index)=> {
         return <FlpsCard item={i} key={index} colorz={colors} searchTerm={searchTerm} handleOpen={handleOpen} />
     })

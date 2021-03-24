@@ -20,15 +20,30 @@ import {codebookText} from './codesplitting'
 
 import Popover from '@material-ui/core/Popover';
 import Button from '@material-ui/core/Button';
-
+import { Link } from 'react-router-dom';
 
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+
+import { useParams } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: '80%',
         margin: '15px auto',
         boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px',
+    },
+    itemlink: { 
+        textDecoration: 'none',
+        color: 'rgba(37, 37, 37, 0.8)',
+        backgroundImage: 'linear-gradient(transparent 1px, rgb(37, 37, 37) 2px)',
+        backgroundSize: '0% 2px',
+        backgroundPosition: '0% 105%',
+        backgroundRepeat: 'no-repeat',
+        transition: 'background-size 0.2s ease 0s, color 0.2s ease 0s',
+        '&:hover': {
+            color: 'rgb(37, 37, 37)',
+            backgroundSize: '100% 3px',
+        }
     },
     media: {
         // height: 0,
@@ -72,6 +87,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function FlpsCard(props) {
+    const { itemid } = useParams();
     const item = props.item
     const classes = useStyles(props);
     const [expanded, setExpanded] = React.useState(false);
@@ -99,7 +115,7 @@ export default function FlpsCard(props) {
     return (
         <Card className={classes.root} elevation={3} variant="outlined">
         <CardHeader
-            title={item.Title}
+            title={itemid ? item.Title : <Link className={classes.itemlink} to={'/item/' + item.ID + '/'} >{item.Title}</Link>}
             subheader={(item.TopTitle.length > 0 ? item.TopTitle + ', ' : '') + item.DateText}
             className={classes.cardheader}
         />

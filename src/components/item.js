@@ -1,25 +1,21 @@
 import { useState, useEffect }  from 'react'
 
-import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-
-import Sidebar from './components/sidebar'
-import Main from './components/main'
-import nlogo from './images/Nblack.png'
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Link } from '@material-ui/core';
 
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import Loading from './components/loading';
 
-// dark: rgb(30, 136, 229)
-// med: rgb(89, 167, 235)
-// light: rgb(157, 203, 243)
+import Avatar from '@material-ui/core/Avatar';
+import nlogo from '../images/Nblack.png'
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Toolbar from '@material-ui/core/Toolbar';
+import { useParams } from 'react-router-dom'
+import Sidebar from './minisidebar';
+import FlpsCard from './card'
+import Loading from './loading';
+import {colors} from './main'
 
 const drawerWidth = 300;
 const useStyles = makeStyles((theme) => ({
@@ -197,104 +193,62 @@ const useStyles = makeStyles((theme) => ({
 
 const Spacer = ({classes}) => <div className={classes.spacer} />
 
-function App(props) { 
-// css
-  const classes = useStyles();
-// filters
-  const [ lang, setLang ] = useState('')
-  const [ code, setCode ] = useState('')
-  const [ dates, setDates ] = useState([1850, 1950])
-  const [ search, setSearch ] = useState('')
-  const [ count, setCount ] = useState(0)
-  const [ codeCount, setCodeCount ] = useState(0)
-// mobile utility
-  const [ mobileOpen, setMobileOpen ] = useState(false)
-  const { window } = props;
-// data GET
-  const [ results, setResults ] = useState([])
-  const [ page, setPage ] = useState(0)
-  const [ loading, setLoading ] = useState(true)
+const Item = (props) => {
 
-  
+  const { window } = props;
+  const classes = useStyles();
+
+  const [ loading, setLoading ] = useState(true)
+  const [ itemData, setItemData ] = useState([])
+  const theme = useTheme();
+  const [ mobileOpen, setMobileOpen ] = useState(false)
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen)
+  }
+  const { itemid } = useParams()
   useEffect(() => {
-    // production: 
-    const url = 'https://flps.newberry.org/db/?code=' + code + '&lang=' + lang + '&dates=' + dates[0] + ',' + dates[1] + '&s='  + search + '&p=' + page
-    // testing & dev: 
-    // const url = 'http://localhost:3002/?code=' + code + '&lang=' + lang + '&dates=' + dates[0] + ',' + dates[1] + '&s='  + search + '&p=' + page
+    const url = 'https://flps.newberry.org/db/item/?itemid=' + itemid
+    // const url = 'http://localhost:3002/item/?itemid=' + itemid
     fetch(url)
       .then(res => res.json())
       .then(
         (result) => {
+          console.log(result[0].ID)
+          setItemData(result[0])
           setLoading(false)
-          setResults(result[0])
-          setCodeCount(result[2])
-          setCount(result[1][0]['COUNT(*)'])
-        },
-        (error) => {
-          setLoading(false)
-          console.log(error)
+        // },
+        // (error) => {
+        //   setLoading(false)
+        //   console.log(error)
         }
       )
     
-  }, [lang, code, dates, search, page])
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen)
-  }
-
-  const theme = useTheme();
-
+  }, [])
   const mqwidth = useMediaQuery('(min-width:1000px)');
-
   return (
-    <div className={classes.root}>
+      <div className={classes.root} >
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            className={classes.menuButton}
-          >
-            <MenuIcon />
-          </IconButton>
           <Avatar alt="Newberry" src={nlogo} variant="square" className={classes.large} />
           <Typography variant="h4" element="h1" noWrap>
             <Link href="/" className={classes.homelink}>{mqwidth ? 'Foreign Language Press Survey' : 'FLPS' } </Link>
           </Typography>
 
-            <Typography className={classes.counts}>{loading ? 'Loading..' : count  + ' result' + (count > 1 || count === 0 ? 's' : '')}.</Typography>
         </Toolbar>
       </AppBar>
-      <Sidebar 
-        lang={lang}
-        setLang={setLang}
-        dates={dates}
-        setDates={setDates}
-        code={code} 
-        setCode={setCode}
-        codeCount={codeCount}
-        search={search}
-        setSearch={setSearch}
-        page={page}
-        setPage={setPage}
-        classes={classes} 
-        handleDrawerToggle={handleDrawerToggle} 
-        mobileOpen={mobileOpen} 
-        theme={theme}
-        window={window}
-        results={results}
-        />
-        <div className={classes.mainwrapper}><Spacer classes={classes} />
-          {/* <Typography className={classes.questions} variant="overline" size="small"  >
-            This site is undergoing revision; please check back as we continue to add functionality. <br />Questions or comments? Contact <a target="_blank" href="mailto:dis@newberry.org" target="_blank" rel="noopener noreferrer">dis@newberry.org<span aria-label="(opens in new tab)"></span></a>
-          </Typography> */}
-          {loading ? <Loading /> : <Main results={results} search={search} classes={classes} />}
-        </div>
+      <Sidebar classes={classes} window={window} handleDrawerToggle={handleDrawerToggle} theme={theme} />
+      <div className={classes.mainwrapper}>
+        <Spacer classes={classes} />
+        {/* <Typography className={classes.questions} variant="overline" size="small"  >
+          This site is undergoing revision; please check back as we continue to add functionality. <br />Questions or comments? Contact <a target="_blank" href="mailto:dis@newberry.org" target="_blank" rel="noopener noreferrer">dis@newberry.org<span aria-label="(opens in new tab)"></span></a>
+        </Typography> */}
+        <main className={classes.content}>
+          {loading ? <Loading /> : <FlpsCard item={itemData} colorz={colors} />}
+        </main>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default  Item

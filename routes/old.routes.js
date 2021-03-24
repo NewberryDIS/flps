@@ -9,8 +9,8 @@ const router = async app => {
         const dates = request.query.dates !== '' ? [parseInt(request.query.dates.substr(0,4)), parseInt(request.query.dates.substr(5,8))] : [1850,1950]
         const searchText = request.query.s !== '' ? '%' + request.query.s + '%' : '%'
         const page = parseInt(request.query.p )
-        let qurry = 'ID IN (SELECT item_id FROM langlink WHERE lang_id IN (SELECT lang_id FROM Langs WHERE ' + lang + ') AND \
-        ID IN (SELECT item_id FROM codelink WHERE code_id IN (SELECT code_id FROM Codes WHERE ' + code + ') AND \
+        let qurry = 'ID IN (SELECT item_id FROM langlink WHERE lang_id IN (SELECT lang_id FROM langs WHERE ' + lang + ') AND \
+        ID IN (SELECT item_id FROM codelink WHERE code_id IN (SELECT code_id FROM codes WHERE ' + code + ') AND \
         Content LIKE "' + searchText + '" AND DateYear BETWEEN ' + dates[0]  + ' AND ' + dates[1]
         console.log(qurry)
         pool.query('SELECT * FROM Items WHERE ' + qurry +  ' LIMIT ' + page + ',100; SELECT COUNT(*) FROM Items WHERE ' + qurry, (error, result) => {
@@ -94,9 +94,9 @@ module.exports = router;
 
 function queryParser (q, t){
     let v = ''
-    if (!q ||  q ===''){
+    if (!q || q ===''){
         v = t + ' LIKE "%")' 
-    } else if (q && q.indexOf(',') > -1) {
+    } else if (q.indexOf(',') > -1) {
         q.split(",").map((l, i) => {
             v += ' ' + t + ' = "' + l + '"' + (i + 1 < q.split(",").length ? ' OR ' : ')')
         })

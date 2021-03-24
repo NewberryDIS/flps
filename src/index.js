@@ -4,13 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { HashRouter, Switch, Route, useLocation } from 'react-router-dom'
+
+import Item from './components/item'
+
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-5551324-7');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 
 ReactDOM.render(
-    <App />,
+  <HashRouter >
+    <Switch>
+      <Route path={`/item/:itemid`} component={() => <Item />} />
+      <Route                        component={() => <App />} />
+    </Switch>
+  </HashRouter >,
   document.getElementById('root')
 );
 
