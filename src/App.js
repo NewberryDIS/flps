@@ -214,25 +214,28 @@ function App(props) {
   const [ results, setResults ] = useState([])
   const [ page, setPage ] = useState(0)
   const [ loading, setLoading ] = useState(true)
-
+//http://localhost:3002/php.php?code=&lang=&date1=1850&date2=1950&s=&p=0
+//http://localhost:3002/php.php?code=&lang=&date1=1850&date2=1950&s=&p=0
   
   useEffect(() => {
     // production: 
-    const url = 'https://flps.newberry.org/db/?code=' + code + '&lang=' + lang + '&dates=' + dates[0] + ',' + dates[1] + '&s='  + search + '&p=' + page
+    const url = 'https://flps.newberry.org/php.php?code=' + code + '&lang=' + lang + '&date1=' + dates[0] + '&date2=' + dates[1] + '&s='  + search + '&p=' + page
     // testing & dev: 
-    // const url = 'http://localhost:3002/?code=' + code + '&lang=' + lang + '&dates=' + dates[0] + ',' + dates[1] + '&s='  + search + '&p=' + page
+    // const url = 'http://localhost:3002/php.php?code=' + code + '&lang=' + lang + '&date1=' + dates[0] + '&date2=' + dates[1] + '&s='  + search + '&p=' + page
+    console.log("url", url)
     fetch(url)
       .then(res => res.json())
       .then(
         (result) => {
+          console.log("result on fetch: ", result)
           setLoading(false)
-          setResults(result[0])
-          setCodeCount(result[2])
-          setCount(result[1][0]['COUNT(*)'])
+          setResults(result)
+          // setCodeCount(result[2])
+          // setCount(result[1][0]['COUNT(*)'])
         },
         (error) => {
           setLoading(false)
-          console.log(error)
+          console.log("error on fetch: ", error)
         }
       )
     
@@ -245,7 +248,7 @@ function App(props) {
   const theme = useTheme();
 
   const mqwidth = useMediaQuery('(min-width:1000px)');
-
+console.log(results)
   return (
     <div className={classes.root}>
       <CssBaseline />

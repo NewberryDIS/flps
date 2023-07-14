@@ -8,9 +8,9 @@ import { HashRouter, Switch, Route, useLocation } from 'react-router-dom'
 
 import Item from './components/item'
 
-import ReactGA from 'react-ga';
-ReactGA.initialize('UA-5551324-7');
-ReactGA.pageview(window.location.pathname + window.location.search);
+import ReactGA from 'react-ga4';
+ReactGA.initialize('G-T73VSEE6FN');
+// ReactGA.pageview(window.location.pathname + window.location.search);
 
 
 ReactDOM.render(
