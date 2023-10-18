@@ -1,243 +1,252 @@
-import { useState, useEffect }  from 'react'
+import { useState, useEffect } from "react";
 
-import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Link } from '@material-ui/core';
+import AppBar from "@material-ui/core/AppBar";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { Link } from "@material-ui/core";
 
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-import Avatar from '@material-ui/core/Avatar';
-import nlogo from '../images/Nblack.png'
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Toolbar from '@material-ui/core/Toolbar';
-import { useParams } from 'react-router-dom'
-import Sidebar from './minisidebar';
-import FlpsCard from './card'
-import Loading from './loading';
-import {colors} from './main'
+import Avatar from "@material-ui/core/Avatar";
+import nlogo from "../images/Nblack.png";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Toolbar from "@material-ui/core/Toolbar";
+import { useParams } from "react-router-dom";
+import Sidebar from "./minisidebar";
+import FlpsCard from "./card";
+import Loading from "./loading";
+import { colors } from "./main";
 
 const drawerWidth = 300;
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    backgroundColor: 'rgba(111,111,111, 0.25)',
+    display: "flex",
+    backgroundColor: "rgba(111,111,111, 0.25)",
   },
   drawer: {
-    backgroundColor: 'rgba(111,111,111, 0.25)',
-    [theme.breakpoints.up('sm')]: {
+    backgroundColor: "rgba(111,111,111, 0.25)",
+    [theme.breakpoints.up("sm")]: {
       width: drawerWidth,
       flexShrink: 0,
     },
   },
   appBar: {
-    backgroundColor: '#1e88e5',
-    [theme.breakpoints.up('sm')]: {
+    backgroundColor: "#1e88e5",
+    [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
-    '& h4': {
-      paddingLeft: '15px',
-    }
+    "& h4": {
+      paddingLeft: "15px",
+    },
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
     },
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
-  spacer: { 
-    paddingTop: '7vh', 
-    background: 'transparent',
-    border: 'none'
+  spacer: {
+    paddingTop: "7vh",
+    background: "transparent",
+    border: "none",
   },
   drawerPaper: {
-    boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px',
+    boxShadow:
+      "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
     width: drawerWidth,
   },
   content: {
     // width: '80%',
-    margin: 'auto',
+    margin: "auto",
     flexGrow: 1,
     padding: theme.spacing(3),
   },
   intro: {
-    width: '80%',
-    margin: '15px auto',
-    padding: '15px',
+    width: "80%",
+    margin: "15px auto",
+    padding: "15px",
   },
   langheader: {
-    padding: '15px',
+    padding: "15px",
     // width: '80%',
-    margin: '15px auto',
+    margin: "15px auto",
   },
   noresults: {
-    padding: '15px',
-    margin: '15px',
+    padding: "15px",
+    margin: "15px",
   },
   please: {
-    textAlign: 'center',
+    textAlign: "center",
   },
   homelink: {
-    color: 'black',
+    color: "black",
     flex: 1,
-    textDecoration: 'none',
+    textDecoration: "none",
     fontFamily: "'Bembo W01', Cardo, serif",
-    '&:hover ': {
-      textDecoration: 'none',
-    }
+    "&:hover ": {
+      textDecoration: "none",
+    },
   },
   dimmed: {
-    fontColor: 'white',
+    fontColor: "white",
   },
   headercard: {
-    '& div': {
+    "& div": {
       fontFamily: "'Bembo W01', Cardo, serif",
     },
-    maxWidth: '80%',
-    margin: '15px auto',
-    boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px',
-
+    maxWidth: "80%",
+    margin: "15px auto",
+    boxShadow:
+      "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
   },
   checkboxes: {
-    margin: '0 auto',
-    width: '100%',
+    margin: "0 auto",
+    width: "100%",
   },
   filterlists: {
-    fontSize: '0.75rem',
-    textTransform: 'uppercase',
-    overflow: 'auto',
-    maxHeight: '300px',    
-    boxShadow: 'inset 0px 3px 1px -2px rgb(0 0 0 / 20%), inset 0px 2px 2px 0px rgb(0 0 0 / 14%), inset 0px 1px 5px 0px rgb(0 0 0 / 12%)',
+    fontSize: "0.75rem",
+    textTransform: "uppercase",
+    overflow: "auto",
+    maxHeight: "300px",
+    boxShadow:
+      "inset 0px 3px 1px -2px rgb(0 0 0 / 20%), inset 0px 2px 2px 0px rgb(0 0 0 / 14%), inset 0px 1px 5px 0px rgb(0 0 0 / 12%)",
   },
-  buttongroup:{
-    align: 'center',
+  buttongroup: {
+    align: "center",
     // display: 'block',
     // width: '100%',
-    margin: '10px auto',
+    margin: "10px auto",
   },
   seclabel: {
-    fontSize: '0.90rem',
-    textTransform: 'uppercase',
-    fontWeight: '700',
-    width: '90%',
-    margin: '10px auto',
+    fontSize: "0.90rem",
+    textTransform: "uppercase",
+    fontWeight: "700",
+    width: "90%",
+    margin: "10px auto",
   },
   code: {
-    fontSize: '0.90rem',
-    textTransform: 'uppercase',
-    fontWeight: '700',
-    width: '90%',
-    margin: '20px auto 0 auto',
+    fontSize: "0.90rem",
+    textTransform: "uppercase",
+    fontWeight: "700",
+    width: "90%",
+    margin: "20px auto 0 auto",
   },
   button: {
-    margin: '10px auto',
-    backgroundColor: 'rgb(157, 203, 243)',
-    '&:hover': {
-      backgroundColor: 'rgb(89, 167, 235)',
-    }
+    margin: "10px auto",
+    backgroundColor: "rgb(157, 203, 243)",
+    "&:hover": {
+      backgroundColor: "rgb(89, 167, 235)",
+    },
   },
   counts: {
     fontFamily: "'Bembo W01', Cardo, serif",
-    fontSize: '1.6rem',
-    color: 'black',
-    flex: '1',
-    textAlign: 'right',
+    fontSize: "1.6rem",
+    color: "black",
+    flex: "1",
+    textAlign: "right",
   },
   codelistitem: {
-    textTransform: 'uppercase',
-    '& .MuiTypography-body1': {
-      fontSize: '0.75rem',
-
+    textTransform: "uppercase",
+    "& .MuiTypography-body1": {
+      fontSize: "0.75rem",
     },
 
-    '& label': {
-      position: 'relative',
-      left: '-22px',
+    "& label": {
+      position: "relative",
+      left: "-22px",
     },
   },
 
   treeroot: {
-    fontSize: '0.75rem',
-    textTransform: 'uppercase',
-    overflow: 'auto',
-    maxHeight: '300px',    
-    padding: '5px',
-      boxShadow: 'inset 0px 3px 1px -2px rgb(0 0 0 / 20%), inset 0px 2px 2px 0px rgb(0 0 0 / 14%), inset 0px 1px 5px 0px rgb(0 0 0 / 12%)',
+    fontSize: "0.75rem",
+    textTransform: "uppercase",
+    overflow: "auto",
+    maxHeight: "300px",
+    padding: "5px",
+    boxShadow:
+      "inset 0px 3px 1px -2px rgb(0 0 0 / 20%), inset 0px 2px 2px 0px rgb(0 0 0 / 14%), inset 0px 1px 5px 0px rgb(0 0 0 / 12%)",
   },
   mainwrapper: {
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column",
   },
   questions: {
-    textAlign: 'center',
-    display: 'block',
-    width: '65%',
-    margin: '80px auto 0 auto',
-    padding: '25px',
-    lineHeight: '1.5rem',
-    position: 'relative',
-    right: '0',
-    border: '1px solid rgb(89, 167, 235)',
-    '& a': {
-      color: 'black',
-      textDecoration: 'underline',
-    }
+    textAlign: "center",
+    display: "block",
+    width: "65%",
+    margin: "80px auto 0 auto",
+    padding: "25px",
+    lineHeight: "1.5rem",
+    position: "relative",
+    right: "0",
+    border: "1px solid rgb(89, 167, 235)",
+    "& a": {
+      color: "black",
+      textDecoration: "underline",
+    },
   },
   spacer: {
-    padding: '2vmin',
-  }
+    padding: "2vmin",
+  },
 }));
 
-const Spacer = ({classes}) => <div className={classes.spacer} />
+const Spacer = ({ classes }) => <div className={classes.spacer} />;
 
 const Item = (props) => {
-
   const { window } = props;
   const classes = useStyles();
 
-  const [ loading, setLoading ] = useState(true)
-  const [ itemData, setItemData ] = useState([])
+  const [loading, setLoading] = useState(true);
+  const [itemData, setItemData] = useState([]);
   const theme = useTheme();
-  const [ mobileOpen, setMobileOpen ] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false);
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen)
-  }
-  const { itemid } = useParams()
+    setMobileOpen(!mobileOpen);
+  };
+  const { itemid } = useParams();
   useEffect(() => {
-    const url = 'https://flps.newberry.org/db/item/?itemid=' + itemid
+    const url = "https://flps.newberry.org/php.php?itemid=" + itemid;
     // const url = 'http://localhost:3002/item/?itemid=' + itemid
     fetch(url)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          console.log(result[0].ID)
-          setItemData(result[0])
-          setLoading(false)
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result[0].ID);
+        setItemData(result[0]);
+        setLoading(false);
         // },
         // (error) => {
         //   setLoading(false)
         //   console.log(error)
-        }
-      )
-    
-  }, [])
-  const mqwidth = useMediaQuery('(min-width:1000px)');
+      });
+  }, []);
+  const mqwidth = useMediaQuery("(min-width:1000px)");
   return (
-      <div className={classes.root} >
+    <div className={classes.root}>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
-          <Avatar alt="Newberry" src={nlogo} variant="square" className={classes.large} />
+          <Avatar
+            alt="Newberry"
+            src={nlogo}
+            variant="square"
+            className={classes.large}
+          />
           <Typography variant="h4" element="h1" noWrap>
-            <Link href="/" className={classes.homelink}>{mqwidth ? 'Foreign Language Press Survey' : 'FLPS' } </Link>
+            <Link href="/" className={classes.homelink}>
+              {mqwidth ? "Foreign Language Press Survey" : "FLPS"}{" "}
+            </Link>
           </Typography>
-
         </Toolbar>
       </AppBar>
-      <Sidebar classes={classes} window={window} handleDrawerToggle={handleDrawerToggle} theme={theme} />
+      <Sidebar
+        classes={classes}
+        window={window}
+        handleDrawerToggle={handleDrawerToggle}
+        theme={theme}
+      />
       <div className={classes.mainwrapper}>
         <Spacer classes={classes} />
         {/* <Typography className={classes.questions} variant="overline" size="small"  >
@@ -248,7 +257,8 @@ const Item = (props) => {
         </main>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default  Item
+export default Item;
+
